@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.oasis1000" version="1.0.17" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>oasis10001</name>
+<widget id="ru.gvozdberi" version="1.0.20" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>GvozdBeri</name>
     <description>
-        Hello World sample application that responds to the deviceready event.
+        Гвоздь Бери мобильный каталог
     </description>
-    <author email="support@phonegap.com" href="http://phonegap.com">
-        PhoneGap Team
+    <author email="info@softf1.ru" href="https://softf1.ru">
+        SoftF1 Developer
     </author>
     <content src="index.html" />
     <preference name="DisallowOverscroll" value="true" />
@@ -30,56 +30,6 @@
         <splash density="port-xhdpi" src="www/res/icon/xxxhdpi.png"/>
         <splash density="port-xxhdpi" src="www/res/icon/xxxhdpi.png"/>
         <splash density="port-xxxhdpi" src="www/res/icon/xxxhdpi.png"/>
-    </platform>
-    <platform name="ios">
-        <icon height="57" platform="ios" src="www/res/icon/xxxhdpi.png" width="57"/>
-        <icon height="114" platform="ios" src="www/res/icon/xxxhdpi.png" width="114"/>
-        <icon height="40" platform="ios" src="www/res/icon/xxxhdpi.png" width="40"/>
-        <icon height="80" platform="ios" src="www/res/icon/xxxhdpi.png" width="80"/>
-        <icon height="50" platform="ios" src="www/res/icon/xxxhdpi.png" width="50"/>
-        <icon height="100" platform="ios" src="www/res/icon/xxxhdpi.png" width="100"/>
-        <icon height="60" platform="ios" src="www/res/icon/xxxhdpi.png" width="60"/>
-        <icon height="120" platform="ios" src="www/res/icon/xxxhdpi.png" width="120"/>
-        <icon height="180" platform="ios" src="www/res/icon/xxxhdpi.png" width="180"/>
-        <icon height="72" platform="ios" src="www/res/icon/xxxhdpi.png" width="72"/>
-        <icon height="144" platform="ios" src="www/res/icon/xxxhdpi.png" width="144"/>
-        <icon height="76" platform="ios" src="www/res/icon/xxxhdpi.png" width="76"/>
-        <icon height="152" platform="ios" src="www/res/icon/xxxhdpi.png" width="152"/>
-        <icon height="29" platform="ios" src="www/res/icon/xxxhdpi.png" width="29"/>
-        <icon height="58" platform="ios" src="www/res/icon/xxxhdpi.png" width="58"/>
-        <icon height="87" platform="ios" src="www/res/icon/xxxhdpi.png" width="87"/>
-        <splash height="1136" platform="ios" src="www/res/icon/xxxhdpi.png" width="640"/>
-        <splash height="1334" platform="ios" src="www/res/icon/xxxhdpi.png" width="750"/>
-        <splash height="2208" platform="ios" src="www/res/icon/xxxhdpi.png" width="1242"/>
-        <splash height="1242" platform="ios" src="www/res/icon/xxxhdpi.png" width="2208"/>
-        <splash height="1536" platform="ios" src="www/res/icon/xxxhdpi.png" width="2048"/>
-        <splash height="768" platform="ios" src="www/res/icon/xxxhdpi.png" width="1024"/>
-        <splash height="2048" platform="ios" src="www/res/icon/xxxhdpi.png" width="1536"/>
-        <splash height="1024" platform="ios" src="www/res/icon/xxxhdpi.png" width="768"/>
-        <splash height="960" platform="ios" src="www/res/icon/xxxhdpi.png" width="640"/>
-        <splash height="480" platform="ios" src="www/res/icon/xxxhdpi.png" width="320"/>
-    </platform>
-    <platform name="wp8">
-        <icon height="99" platform="wp8" src="www/res/icon/xxxhdpi.png" width="99"/>
-        <icon height="159" platform="wp8" src="www/res/icon/xxxhdpi.png" width="159"/>
-        <splash height="1280" platform="wp8" src="www/res/icon/xxxhdpi.png" width="768"/>
-    </platform>
-    <platform name="windows">
-        <icon height="150" platform="windows" src="www/res/icon/xxxhdpi.png" width="150"/>
-        <icon height="30" platform="windows" src="www/res/icon/xxxhdpi.png" width="30"/>
-        <icon height="50" platform="windows" src="www/res/icon/xxxhdpi.png" width="50"/>
-        <splash height="300" platform="windows" src="www/res/icon/xxxhdpi.png" width="620"/>
-        <icon height="120" platform="windows" src="www/res/icon/xxxhdpi.png" width="120"/>
-        <icon height="44" platform="windows" src="www/res/icon/xxxhdpi.png" width="44"/>
-        <icon height="106" platform="windows" src="www/res/icon/xxxhdpi.png" width="106"/>
-        <icon height="70" platform="windows" src="www/res/icon/xxxhdpi.png" width="70"/>
-        <icon height="71" platform="windows" src="www/res/icon/xxxhdpi.png" width="71"/>
-        <icon height="170" platform="windows" src="www/res/icon/xxxhdpi.png" width="170"/>
-        <icon height="360" platform="windows" src="www/res/icon/xxxhdpi.png" width="360"/>
-        <icon height="310" platform="windows" src="www/res/icon/xxxhdpi.png" width="310"/>
-        <icon height="150" platform="windows" src="www/res/icon/xxxhdpi.png" width="310"/>
-        <icon height="360" platform="windows" src="www/res/icon/xxxhdpi.png" width="744"/>
-        <splash height="1920" platform="windows" src="www/res/icon/xxxhdpi.png" width="1152"/>
     </platform>
     <access origin="*" />
     <allow-intent href="http://*/*" />
