@@ -1,16 +1,15 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="ru.gvozdberi" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>Гвоздь Бери</name>
-	<icon src="res/android/xxxhdpi.png" />
-	<splash src="res/android/xxxhdpi.png" />
-	<platform name="android">
-		<icon src="res/android/ldpi.png" density="ldpi" />
-		<icon src="res/android/mdpi.png" density="mdpi" />
-		<icon src="res/android/hdpi.png" density="hdpi" />
-		<icon src="res/android/xhdpi.png" density="xhdpi" />
-		<icon src="res/android/xxhdpi.png" density="xxhdpi" />
-		<icon src="res/android/xxxhdpi.png" density="xxxhdpi" />
-	</platform>
+	<icon src="icon.png" />
+    <platform name="android">
+        <icon src="res/icon/ldpi.png" density="ldpi" />
+        <icon src="res/icon/mdpi.png" density="mdpi" />
+        <icon src="res/icon/hdpi.png" density="hdpi" />
+        <icon src="res/icon/xhdpi.png" density="xhdpi" />
+        <icon src="res/icon/xxhdpi.png" density="xxhdpi" />
+        <icon src="res/icon/xxxhdpi.png" density="xxxhdpi" />
+    </platform>
     <description>
         Гвоздь Бери мобильный каталог
     </description>
