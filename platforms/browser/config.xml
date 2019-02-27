@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="ru.gvozdberi" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>Гвоздь Бери</name>
+    <description>
+        A blank PhoneGap app.
+    </description>
+    <author email="info@softf1.ru" href="https://softf1.ru">
+        SoftF1 Developer
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+</widget>
