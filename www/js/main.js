@@ -1,68 +1,122 @@
 jQuery(document).ready(function () {
-    getBtns(0);
-    jQuery(".mainBtn").on("click", ".btn", function(){
-        getBtns(jQuery(this).attr("btn"));
-    });
-    jQuery(".pathBtn").on("click", ".pathA", function(){
-        getBtns(jQuery(this).attr("btn"));
-    });
-    
-     
-    
-    
-});
-function getBtns(id) {
-    id = parseInt(id);
-    jQuery(".mainBtn").html('<div class="col-md-12">Загрузка...</div>');
-    jQuery(".itemsBox").html("");
-    jQuery.ajax({
-        dataType: "JSON",
-        url: "https://oasis1000.com/api/1/Page_Index_Button/GetBtn/",
-        data: {id: id},
-        success: function (data) {
-            var html  = "";
-            if (data.adr.length > 0) {
-                html = html + "<a href='#' class='pathA' btn='0'>Главная</a>";
+    var apiurl = "http://mobile.gvozdberi.ru/api";
+    jQuery(".loadFromApi").each(function () {
+        var box = jQuery(this);
+        box.html("<div class='load'>Загрузка...</div>");
+        box.removeClass(".loadFromApi");
+        jQuery.ajax({
+            type: "POST",
+            url: apiurl + jQuery(this).attr("api") + location.search,
+            success: function (html) {
+                box.html(html);
             }
-            data.adr.forEach(function(item, i, arr) {
-                html = html + " / <a href='#' class='pathA' btn='"+item.page_index_button_id+"'>"+item.page_index_button_name+"</a>";
-            });
-            jQuery(".pathBtn").html(html);
-            
-            var html  = "";
-            data.btn.forEach(function(item, i, arr) {
-                html = html + '<div class="col-md-4">\n\
-                    <div class="btn btn-primary btn-block" btn="'+item.page_index_button_id+'">'+item.page_index_button_name+'</div>\n\
-                </div>';
-            });
-            jQuery(".mainBtn").html(html);
-            
-            var html  = "";
-            data.items.forEach(function(item, i, arr) {
-                html = html + '<div class="col-md-4 item itemBox">\n\
-                    <div class="name">'+item.page_index_button_items_name+'</div>';
-                    if (item.page_index_button_items_image.length > 0) {
-                        html = html + '<div class="image"><img src="https://oasis1000.com/'+item.page_index_button_items_image[0].files_path+'"></div>';
-                    }
-                    if (item.page_index_button_items_text != null) {
-                        html = html + '<div class="text">'+item.page_index_button_items_text+'</div>';
-                    }
-                    if (item.page_index_button_items_price_user != null) {
-                        html = html + '<div class="price">Цена: '+item.page_index_button_items_price+'р.<br>Для участников: '+item.page_index_button_items_price_user+'р.</div>';
-                    } else {
-                        html = html + '<div class="price">Цена: '+item.page_index_button_items_price+'р.</div>';
-                    }
-                    html = html + '<div class="cartEditCount" rid="'+item.page_index_button_items_id+'" price="444">\n\
-                        <div class="cartCountMinus"></div>\n\
-                        <input type="number" value="'+item.count+'" min="0">\n\
-                        <div class="cartCountPlus cartAddAnimate"></div>\n\
-                    </div>\n\
-                </div>';
-                
-            });
-            jQuery(".itemsBox").html(html);
-            
+        });
+    });
+
+    jQuery.ajax({
+        type: "POST",
+        dataType: 'json',
+        url: apiurl + "/1/Cart/Items",
+        success: function (data) {
+            jQuery(".cart_count").text(data.count);
+            jQuery(".cart_price").text(data.price);
         }
     });
 
+
+    jQuery(".catalogBox").on("click", ".pcb .bay", function () {
+        var box = jQuery(this).parents(".pcb").eq(0);
+        var id = jQuery(box).attr("record");
+        var count = jQuery(".count", box).val();
+        if (count <= 0) {
+            count = 1;
+        }
+        jQuery(".cartBay", box).css("display", "none");
+        jQuery(".cartDel", box).css("display", "block");
+
+        setCount(id, count);
+
+    });
+
+    jQuery(".catalogBox").on("click", ".pcb .del", function () {
+        var box = jQuery(this).parents(".pcb").eq(0);
+        var id = jQuery(box).attr("record");
+        jQuery(".cartBay", box).css("display", "block");
+        jQuery(".cartDel", box).css("display", "none");
+        setCount(id, 0);
+    });
+
+    function setCount(id, count, summ = null) {
+        jQuery.ajax({
+            type: "POST",
+            dataType: 'json',
+            data: {id: id, count: count},
+            url: apiurl + "/1/Cart/SetCount",
+            success: function (data) {
+                jQuery(".cart_count").text(data.count);
+                jQuery(".cart_price").text(data.price);
+                if (summ != undefined && summ != null) {
+                    jQuery(summ).text(data.this_price);
+                }
+            }
+        });
+    }
+    jQuery(".cartBox").on("change", ".cartCount", function () {
+        var id = jQuery(this).attr("record");
+        var count = jQuery(this).val();
+        if (count <= 0) {
+            count = 1;
+        }
+        jQuery(this).val(count);
+        var summ = jQuery(this).parents("tr").find(".cartSumm");
+        setCount(id, count, summ);
+    });
+    jQuery(".cartBox").on("click", ".cartDel", function () {
+        var id = jQuery(this).attr("record");
+        var summ = jQuery(this).parents("tr").find(".cartSumm");
+        setCount(id, 0, summ);
+        jQuery(this).parents("tr").remove();
+    });
+    jQuery(".cartBox").on("click", ".cartSend", function () {
+        jQuery(".cartError").css("display", "none");
+        var btn = jQuery(this);
+        if (jQuery(btn).prop("disabled") == false) {
+            jQuery(btn).prop("disabled", true);
+            jQuery(btn).text("Загрузка...");
+            jQuery.ajax({
+                type: "POST",
+                dataType: 'json',
+                data: jQuery("#cartOrderForm").serialize(),
+                url: apiurl + "/1/Cart/Order",
+                success: function (data) {
+                    jQuery(btn).prop("disabled", false);
+                    jQuery(btn).text("Заказать");
+                    if (data.error.length > 0) {
+                        var text = "";
+                        for (var item in data.error) {
+                            text = text + data.error[item] + "<br>";
+                        }
+                        jQuery(".cartError").html(text);
+                        jQuery(".cartError").css("display", "block");
+                    } else {
+                        jQuery(".cartBox").html(data.html);
+                        jQuery(".cart_count").text(0);
+                        jQuery(".cart_price").text(0);
+                    }
+                }
+            });
+        }
+
+    });
+    jQuery(".goTop").on("click", function () {
+        jQuery("body, html").animate({scrollTop:0}, 500);
+    });
+});
+
+function getUrlParameter(name) {
+    name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+    var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+    var results = regex.exec(location.search);
+    return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
 }
+;
