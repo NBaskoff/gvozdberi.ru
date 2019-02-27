@@ -7,22 +7,67 @@
         "files": {}
     },
     "installed_plugins": {
-        "cordova-plugin-whitelist": {
-            "PACKAGE_NAME": "ru.gvozdberi"
-        },
         "cordova-plugin-battery-status": {
-            "PACKAGE_NAME": "ru.gvozdberi"
+            "PACKAGE_NAME": "com.oasis1000"
         },
         "cordova-plugin-camera": {
-            "PACKAGE_NAME": "ru.gvozdberi"
+            "PACKAGE_NAME": "com.oasis1000"
         },
         "cordova-plugin-media-capture": {
-            "PACKAGE_NAME": "ru.gvozdberi"
+            "PACKAGE_NAME": "com.oasis1000"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "com.oasis1000"
+        },
+        "cordova-plugin-contacts": {
+            "PACKAGE_NAME": "com.oasis1000"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.oasis1000"
+        },
+        "cordova-plugin-device-motion": {
+            "PACKAGE_NAME": "com.oasis1000"
+        },
+        "cordova-plugin-device-orientation": {
+            "PACKAGE_NAME": "com.oasis1000"
+        },
+        "cordova-plugin-dialogs": {
+            "PACKAGE_NAME": "com.oasis1000"
+        },
+        "cordova-plugin-file-transfer": {
+            "PACKAGE_NAME": "com.oasis1000"
+        },
+        "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "com.oasis1000"
+        },
+        "cordova-plugin-globalization": {
+            "PACKAGE_NAME": "com.oasis1000"
+        },
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "com.oasis1000"
+        },
+        "cordova-plugin-media": {
+            "PACKAGE_NAME": "com.oasis1000"
+        },
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "com.oasis1000"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.oasis1000"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "com.oasis1000"
+        },
+        "cordova-plugin-vibration": {
+            "PACKAGE_NAME": "com.oasis1000"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.oasis1000"
         }
     },
     "dependent_plugins": {
         "cordova-plugin-file": {
-            "PACKAGE_NAME": "ru.gvozdberi"
+            "PACKAGE_NAME": "com.oasis1000"
         }
     }
 }
