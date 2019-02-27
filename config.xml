@@ -3,7 +3,13 @@
     <name>Гвоздь Бери</name>
 	<icon src="icon.png" />
 	<platform name="android">
-        <icon src="icon.png" width="96" height="96" />
+		<icon src="logo.png" platform="android" qualifier="ldpi" />
+		<icon src="logo.png" platform="android" qualifier="mdpi" />
+		<icon src="logo.png" platform="android" qualifier="hdpi" />
+		<icon src="logo.png" platform="android" qualifier="xhdpi" />
+		<icon src="logo.png" platform="android" qualifier="xxhdpi" />
+		<icon src="logo.png" platform="android" qualifier="xxxhdpi" />
+		<icon src="logo.png" platform="android" qualifier="fr-xxhdpi" />
     </platform>
     <description>
         Гвоздь Бери мобильный каталог
