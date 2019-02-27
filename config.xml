@@ -2,11 +2,18 @@
 <widget id="ru.gvozdberi" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>Гвоздь Бери</name>
     <description>
-        A blank PhoneGap app.
+        Гвоздь Бери мобильный каталог
     </description>
     <author email="info@softf1.ru" href="https://softf1.ru">
         SoftF1 Developer
     </author>
     <content src="index.html" />
     <access origin="*" />
+	<plugin name="cordova-plugin-whitelist" version="1" source="npm"/>
+	<allow-intent href="http://*/*"/>
+	<allow-intent href="https://*/*"/>
+	<allow-intent href="tel:*"/>
+	<allow-intent href="sms:*"/>
+	<allow-intent href="mailto:*"/>
+	<allow-intent href="geo:*"/>
 </widget>
