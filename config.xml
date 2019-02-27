@@ -1,7 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="ru.gvozdberi" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>Гвоздь Бери</name>
-	<icon src="icon.png" />
+	<icon src="icon-96-xhdpi.png" />
+	<splash src="icon-96-xhdpi.png" />
 	<platform name="android">
 		<icon src="icon-180.png" width="180" height="180" />
     </platform>
