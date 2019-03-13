@@ -130,4 +130,19 @@
   border: 1px solid #d7251a;
   border-radius: 100%;
 }
+.pagination {
+  flex-wrap: wrap;
+}
+.pagination .page-item {
+  margin: 2px;
+}
+.pagination .page-item .page-link {
+  border: 1px solid #d7251a;
+  border-radius: 5px;
+  color: #d7251a;
+}
+.pagination .page-item.active .page-link {
+  background-color: #d7251a;
+  color: #ffffff;
+}
 /*# sourceMappingURL=styles.css.map */
