@@ -111,6 +111,10 @@ jQuery(document).ready(function () {
     jQuery(".goTop").on("click", function () {
         jQuery("body, html").animate({scrollTop:0}, 500);
     });
+    if (getUrlParameter("name") != undefined) {
+        jQuery("input[name=name]").val(getUrlParameter("name"));
+    }
+    
 });
 
 function getUrlParameter(name) {
