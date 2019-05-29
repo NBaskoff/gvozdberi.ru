@@ -11,6 +11,12 @@
     <preference name="DisallowOverscroll" value="true" />
     <preference name="android-minSdkVersion" value="14" />
     <plugin name="cordova-plugin-whitelist" source="npm" spec="~1.2.1" />
+	<icon density="ldpi" src="www/res/icon/ldpi.png"/>
+	<icon density="mdpi" src="www/res/icon/mdpi.png"/>
+	<icon density="hdpi" src="www/res/icon/hdpi.png"/>
+	<icon density="xhdpi" src="www/res/icon/xhdpi.png"/>
+	<icon density="xxhdpi" src="www/res/icon/xxhdpi.png"/>
+	<icon density="xxxhdpi" src="www/res/icon/xxxhdpi.png"/>	
     <platform name="android">
         <icon density="ldpi" src="www/res/icon/ldpi.png"/>
         <icon density="mdpi" src="www/res/icon/mdpi.png"/>
