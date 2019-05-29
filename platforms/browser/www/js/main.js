@@ -61,21 +61,24 @@ jQuery(document).ready(function () {
             }
         });
     }
-    jQuery(".cartBox").on("change", ".cartCount", function () {
+    jQuery(".cartBox").on("change keyup", ".cartCount", function () {
         var id = jQuery(this).attr("record");
         var count = jQuery(this).val();
-        if (count <= 0) {
-            count = 1;
+        if (count == "") {
+            count = 0;
         }
-        jQuery(this).val(count);
-        var summ = jQuery(this).parents("tr").find(".cartSumm");
+        if (count < 0) {
+            count = 1;
+            jQuery(this).val(count);
+        }
+        var summ = jQuery(this).parents(".text").find(".cartSumm");
         setCount(id, count, summ);
     });
     jQuery(".cartBox").on("click", ".cartDel", function () {
         var id = jQuery(this).attr("record");
-        var summ = jQuery(this).parents("tr").find(".cartSumm");
+        var summ = jQuery(this).parents(".item").find(".cartSumm");
         setCount(id, 0, summ);
-        jQuery(this).parents("tr").remove();
+        jQuery(this).parents(".item").remove();
     });
     jQuery(".cartBox").on("click", ".cartSend", function () {
         jQuery(".cartError").css("display", "none");
@@ -115,6 +118,26 @@ jQuery(document).ready(function () {
         jQuery("input[name=name]").val(getUrlParameter("name"));
     }
     
+    
+    jQuery(".nav-item.dropdown .dropdown-toggle").click(function(){
+        var open = jQuery(this).next(".dropdown-menu");
+        if (open.css("display") == "none") {
+            open.slideDown();
+        } else {
+            open.slideUp();
+        }
+    });
+
+    jQuery(".navbar-open").click(function(){
+        var open = jQuery(this).next(".navbar");
+        if (open.css("display") == "none") {
+            open.slideDown();
+        } else {
+            open.slideUp();
+        }
+    });    
+    
+    
 });
 
 function getUrlParameter(name) {
@@ -122,5 +145,4 @@ function getUrlParameter(name) {
     var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
     var results = regex.exec(location.search);
     return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
-}
-;
+};
