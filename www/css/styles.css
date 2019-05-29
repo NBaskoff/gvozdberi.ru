@@ -199,7 +199,7 @@ body {
   align-items: flex-start;
 }
 .contentBox .catalogItems .catalogItem {
-  width: 160px;
+  width: 135px;
   border: 1px solid #e6e6e6;
   border-radius: 3px;
   background: url(../i/border.png);
