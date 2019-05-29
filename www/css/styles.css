@@ -104,12 +104,12 @@ body {
 .contentBox .border {
   border: 1px solid #e6e6e6;
   border-radius: 3px;
-  background: #ffffffe8;
+  background: url(../i/border.png);
 }
 .contentBox .indexSlider {
   border: 1px solid #e6e6e6;
   border-radius: 3px;
-  background: #ffffffe8;
+  background: url(../i/border.png);
   padding: 10px 20px 20px 20px;
 }
 .contentBox .indexSlider .logo {
@@ -151,7 +151,7 @@ body {
   width: 100%;
   border: 1px solid #e6e6e6;
   border-radius: 3px;
-  background: #ffffffe8;
+  background: url(../i/border.png);
   padding: 10px;
   margin: 0 0 10px 0;
 }
@@ -179,7 +179,7 @@ body {
   width: 100%;
   border: 1px solid #e6e6e6;
   border-radius: 3px;
-  background: #ffffffe8;
+  background: url(../i/border.png);
   margin: 0 0 10px;
   padding: 10px;
 }
@@ -203,7 +203,7 @@ body {
   width: 160px;
   border: 1px solid #e6e6e6;
   border-radius: 3px;
-  background: #ffffffe8;
+  background: url(../i/border.png);
   margin: 0 5px 15px 5px;
 }
 .contentBox .catalogItems .catalogItem .image {
@@ -240,7 +240,7 @@ body {
   width: 100%;
   border: 1px solid #e6e6e6;
   border-radius: 3px;
-  background: #ffffffe8;
+  background: url(../i/border.png);
   height: 20px;
   text-align: center;
 }
@@ -278,7 +278,7 @@ body {
   position: relative;
   border: 1px solid #e6e6e6;
   border-radius: 3px;
-  background: #ffffffe8;
+  background: url(../i/border.png);
   width: 100%;
   display: flex;
   align-items: center;
@@ -307,7 +307,7 @@ body {
 .contentBox .cartBox .basketItems .item .text .cartCount {
   border: 1px solid #e6e6e6;
   border-radius: 3px;
-  background: #ffffffe8;
+  background: url(../i/border.png);
   height: 25px;
   width: 100%;
   text-align: center;
@@ -342,7 +342,7 @@ body {
   width: 100%;
   border: 1px solid #e6e6e6;
   border-radius: 3px;
-  background: #ffffffe8;
+  background: url(../i/border.png);
   padding: 5px;
   color: #e43930;
   font-size: 14px;
@@ -361,7 +361,7 @@ body {
   width: 100%;
   border: 1px solid #e6e6e6;
   border-radius: 3px;
-  background: #ffffffe8;
+  background: url(../i/border.png);
   height: 25px;
   padding: 5px;
 }
@@ -379,7 +379,7 @@ body {
   width: 100%;
   border: 1px solid #e6e6e6;
   border-radius: 3px;
-  background: #ffffffe8;
+  background: url(../i/border.png);
   padding: 10px 0 0 10px;
   display: flex;
   flex-wrap: wrap;
